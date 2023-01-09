@@ -2,8 +2,8 @@ package com.maksdave.angularspringbootdemo.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.maksdave.angularspringbootdemo.entity.enums.Role;
-import com.maksdave.angularspringbootdemo.repository.UserRepository;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -12,8 +12,9 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.*;
 
-@Data
 @Entity
+@Data
+@NoArgsConstructor
 public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
